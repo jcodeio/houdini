@@ -89,7 +89,7 @@ ${cyan('   Error  :')} ${(e as Error).message}`
 }
 
 export function extractHeadersStr(str: string | undefined) {
-	const regex = /(\w+)=("[^"]*"|[^ ]*)/g
+	const regex = /([\w-]+)=("[^"]*"|[^ ]*)/g;
 	const obj: Record<string, string> = {}
 
 	let match
